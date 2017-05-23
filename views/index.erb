@@ -1,12 +1,11 @@
 
-
-<html>
-<head>
-  <h1> May name is <%=@names%> </h1>
-</head>
-<body>
-  <p>
+  <% if @name %>
+  <h1> May name is <%= @name %> </h1>
+  <% end %>
+  <form action="/named-cat">
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+  </form>
+  <div>
   <img src="http://bit.ly/1eze8aE" alt="Cat" style="border: 3px dashed red;">
-</p>
-</body>
-</html>
+</div>
