@@ -32,7 +32,6 @@ get '/random-cat' do
 end
 
 get '/cat-form' do #gets form, you add name and it calls '/named-cat'
-end
   erb :cat_form
 end
 
