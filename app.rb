@@ -26,7 +26,13 @@ get '/car' do
   "Riding along"
 end
 
-get '/cat' do
-  @names = ["Amigo", "Oscar", "Viking"]
+get '/random-cat' do
+  @names = ["Amigo", "Oscar", "Viking"].sample
+  erb :index
+end
+
+get '/named-cat' do
+  @names = params[:name]
+  p params
   erb :index
 end
