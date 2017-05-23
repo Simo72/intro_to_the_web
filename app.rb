@@ -31,14 +31,13 @@ get '/random-cat' do
   erb :index
 end
 
-get '/named-cat' do
-  p params
-  @name = params[:name]
-  erb :index
+get '/cat-form' do #gets form, you add name and it calls '/named-cat'
+end
+  erb :cat_form
 end
 
-post '/form' do
-  puts params
+post '/named-cat' do
+  p params
   @name = params[:name]
   erb :index
 end
